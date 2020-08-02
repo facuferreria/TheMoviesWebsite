@@ -1,0 +1,54 @@
+@import 'config';
+
+.option-section{
+    width: 100%;
+    padding: 80px 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 35px 10px;
+    position: relative;
+    cursor: pointer;
+    @include fade-animation;
+   
+    &-img{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: rgba(2, 12, 27, 0.7) 0 10px 30px -15px;
+    }
+
+    &-div{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(2, 12, 27, 0.7);
+        color: #fff;
+    }
+
+    &-title{
+        text-align: center;
+        padding: 5px;
+        border-radius: .3em;
+    }
+}
+
+.top-option{
+    @extend .option;
+    cursor: default;
+}

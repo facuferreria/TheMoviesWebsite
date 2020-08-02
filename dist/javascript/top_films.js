@@ -11,14 +11,17 @@ const baseLocation = 'http://127.0.0.1:5500/dist/html%20pages/';
 export {popularDiv, kidsDiv, theatreDiv, showTopFilms}
 
 if (window.location.href === `${baseLocation}popular.html`) {
+    //CALLING SHOWTOPFILMS()
     window.addEventListener('load', () => showTopFilms('&sort_by=popularity.desc', popularDiv));
 }
 
 if (window.location.href === `${baseLocation}theatre.html`) {
+    //CALLING SHOWTOPFILMS()
     window.addEventListener('load', () => showTopFilms('&sort_by=release_date.desc', theatreDiv));
 }
 
 if (window.location.href === `${baseLocation}kids.html`) {
+    //CALLING SHOWTOPFILMS()
     window.addEventListener('load', () => showTopFilms('&sort_by=popularity.desc&certification_country=US&certification=G', kidsDiv));
 }
 
@@ -28,7 +31,8 @@ if (window.location.href === `${baseLocation}index.html`) {
     window.addEventListener('load', ()=> { return showTopFilms('&sort_by=popularity.desc&certification_country=US&certification=G')});
 }
 
-
+//SHOWING TOP FILMS IN RESPECTIVE SECTIONS 
+//(POPULAR, IN THEATRES AND AND POPULAR FOR KIDS)
 async function showTopFilms(type, container) {
 
     const topUrl = `${baseUrl}discover/movie?api_key=${apiKey}${type}`;
@@ -42,7 +46,7 @@ async function showTopFilms(type, container) {
     return showOptions(topJson.results, container);
 }
 
-
+//SHOWING TOP 3 FILMS IN RESPECTIVE SECTIONS IN HOME PAGE
 function showTopTree  (data = [], typeFilms) {
 
     let topPopular = document.getElementById('top-popular');

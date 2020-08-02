@@ -1,5 +1,6 @@
 import { baseUrl, apiKey, getImage, mainSection } from "./app.js";
 
+//GETTING INFO OF SELECTED FILM
 export async function getInfo (filmData, filmTitle, path) {
 
     let type = (filmData.media_type) ? filmData.media_type : 'movie';

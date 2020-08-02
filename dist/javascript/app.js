@@ -1,3 +1,4 @@
+
 'use strict';
 
 //SELECTING DOM ELEMENTS
@@ -29,18 +30,19 @@ menuBtn.addEventListener('click', () => {
 const apiKey = '42576017bb40e0e9473173d7ccffd32b';
 const baseUrl = 'https://api.themoviedb.org/3/';
 
+//CALLING SEARCHMULTIMEDIA()
 searchBtn.addEventListener('click', () => searchMultiMedia(input.value))
 document.addEventListener("keyup", (event) => {
     if(event.keyCode === 13) return searchMultiMedia(input.value);
 });
 
-
+//IMPORT AND EXPORT VARIABLES AND FUNCTIONS
 export {baseUrl, apiKey, getImage, mainSection};
 import { getInfo } from "./film_data.js";
 import { showTopFilms, popularDiv, kidsDiv, theatreDiv } from "./top_films.js";
 
 
-
+//SEARCHING FUNCTION
 async function searchMultiMedia(movie){
 
     const url = `${baseUrl}search/multi?api_key=${apiKey}&query=${movie}`;
@@ -53,7 +55,7 @@ async function searchMultiMedia(movie){
     return input.value = '';
 }
 
-
+//SHOWING OPTIONS FUNCTION
 export function showOptions(options = [], optionContainer) {
 
     optionContainer.innerHTML = '';
@@ -74,12 +76,13 @@ export function showOptions(options = [], optionContainer) {
 
         let optionList = document.querySelectorAll('#option-container');
         optionList[i].addEventListener('click', () => {
+            //CALLING GETINFO() IN FILM_DATA.JS
             return getInfo(el, optionTitle, imagePath)
         });
     });
 }
 
-
+//GET IMAGE OF THE MOVIES, FILM, ETC.
 let getImage = (width, path) => {
 
     if (screen.width < 600){

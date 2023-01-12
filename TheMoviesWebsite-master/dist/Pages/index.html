@@ -1,0 +1,77 @@
+<!--HOME PAGE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+    </div>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="index.html" class="link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="theatre.html" class="link">IN THEATRES</a>
+            </li>
+            <li class="nav-item">
+                <p class="link">MOST POPULAR</p>
+                <ul class="popular-options">
+                    <li class="nav-item">
+                        <a href="popular.html" class="link">FOR ADULTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kids.html" class="link">FOR KIDS</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="about-us.html" class="link">ABOUT US</a>
+            </li>
+        </ul> 
+        <div class="search">
+            <input type="text" class="search-bar" id="search-bar" placeholder= "E.g: The Office, Tom Hanks, etc">
+            <button type="submit" class="search-btn"><img src="../img/search.svg"  alt=""></button>
+        </div>
+    </nav>
+
+    <section class="main-section" id="main-section">
+        <div class="intro-container">
+            <h1 class="intro-text">HI WELCOME TO THE MOVIES WEBSITE WHERE YOU CAN FIND ANYTHING ABOUT ANY FILM OR TV SHOWS</h1>
+        </div>
+
+
+        <div class="info-container" id="in-theatres">
+            <h2 class="title">MOVIES IN THEATRES</h2>
+            <div class="top-images" id="top-upcoming"></div>
+            <a href="theatre.html" class="more-link">See More</a>
+        </div>
+
+        <div class="info-container" id="most-popular">
+            <h2 class="title">MOST POPULAR MOVIES</h2>
+            <div class="top-images" id="top-popular"></div>
+            <a href="popular.html" class="more-link">See More</a>
+        </div>
+
+        <div class="info-container" id="fo-kids">
+            <h2 class="title">FOR KIDS</h2>
+            <div class="top-images" id="top-kids"></div>
+            <a href="kids.html" class="more-link">See More</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+            <p class="footer-text">All rights reserved by This page</p>
+        </footer>
+
+    <script  type="module" src="../javascript/app.js"></script>
+</body>
+</html>

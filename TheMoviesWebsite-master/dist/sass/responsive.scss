@@ -1,0 +1,80 @@
+@import 'config', 'top_film';
+
+@include responsive-phone{
+    *{
+        font-size: 10px;
+    }
+    
+    @include burger-nav;
+
+    .film-container{
+        width: 100%;
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, 1fr);
+    }
+
+    .film-img{
+       grid-column: 1/-1;
+    }
+
+    .film-data{
+        grid-column: 1/-1;
+    }
+}
+
+@include responsive-tablet{
+    *{
+        font-size: 13px;
+    }
+
+    @include burger-nav;
+}
+
+@include responsive-laptop{
+    *{
+        font-size: 18px;
+    }
+
+    .link{
+        &::after{
+            content: "";
+            height: 2px;
+            background-color: #fff;
+            display: block;
+            width: 0;
+            transition: width .5s;
+        }
+
+        &:hover::after{
+            width: 100%;
+            transition: width .3s;
+        }
+    }
+
+    .popular-options{
+        display: none;
+        position: absolute;
+        margin: 0;
+        left: 25%;
+        border-radius: .2em;
+
+        & li{
+            list-style: none;
+        }
+    }
+
+    .nav-item{
+        position: relative;
+
+        &:nth-child(3):hover .popular-options{
+            display: block;
+        }
+    }
+
+    .option{
+        &:hover{
+            @include transition-ease;
+            transform: scale(1.1);
+        }
+    }
+}

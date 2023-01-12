@@ -1,0 +1,104 @@
+@import 'about', 'config', 'nav', 'film', 'top_film', 'responsive';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: weights(text-weight);
+    @include transition-ease;
+    position: relative;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #e1e1e1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $nav-color;
+}
+
+::-webkit-scrollbar-thumb:hover:active{
+    background-color: darken($color: $nav-color, $amount: 5);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-section, .about-section,
+.popular-section, .theatre-section, .kids-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text, .about-title,
+.popular-title, .theatre-title, .kids-title{
+    @include fade-animation;
+    font-size: 1.9em;
+    font-weight: weight(text-weight);
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.info-container{
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.title{
+    padding: 10px;
+    font-weight: weight(title-weight);
+    background-color: map-get($principal-theme , nav-color);
+    color: map-get($principal-theme , primary-color);
+    @include fade-animation;
+}
+
+
+.more-link{
+    color: map-get($principal-theme , secundary-color);
+    text-decoration: none;
+    position: absolute;
+    left: 90%;
+    top: 95%;
+    margin: 0 0 30px 0;
+    @include fade-link;
+}
+
+.footer{
+    width: 100%;
+    height: 40px;
+    background-color: map-get($principal-theme , nav-color);
+    color: map-get($principal-theme , primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    @include fade-animation;
+}
+
+.top-images{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}

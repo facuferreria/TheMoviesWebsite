@@ -1,0 +1,59 @@
+@import 'config';
+
+.film-container{
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, 1fr);
+    padding: 10px;
+}
+
+.film-title{
+    font-weight: weight(text-weight);
+    text-align: center;
+    font-size: 2.2em;
+    margin:  0 0 60px 0;
+    grid-column: 1/-1;
+    align-items: center;
+}
+
+.film-img{ 
+    display: block;
+    margin: auto auto 30px auto;
+    box-shadow: rgba(2, 12, 27, 0.7) 0 10px 30px -15px;
+}
+
+.film-data{
+    float: right;
+    width: 100%;
+    grid-column: 2/-1;
+    justify-items: start;
+    align-self: start;
+}
+
+.info-para{
+    margin: 30px 15px;
+    border-bottom: 1px solid #212121;
+}
+
+.info-text{
+    margin: 0 0 0 auto;
+    float: right;
+    word-break: break-all;
+}
+
+.subtitle{
+    font-size: 1.8em;
+    font-weight: weight(text-weight);
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.film-overview{
+    grid-column: 1 / -1;
+    margin:  0 0 60px 0;
+}
+
+.info-overview{
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+@import 'config';
+
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 50px auto; 
+}
+
+.about-text{
+    font-size: 0.9;
+    margin: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: darken($color: $nav-color, $amount: 6) ;
+    color: map-get($principal-theme, primary-color );
+    @include fade-animation;
+}
+

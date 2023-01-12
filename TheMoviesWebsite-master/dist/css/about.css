@@ -1,0 +1,29 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 50px auto;
+}
+
+.about-text {
+  font-size: 0.9;
+  margin: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #840004;
+  color: #fff;
+  animation: to-top 1s linear 0s 1 alternate;
+}
+
+@keyframes to-top {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 25px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+/*# sourceMappingURL=about.css.map */
